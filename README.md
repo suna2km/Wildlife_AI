@@ -2,7 +2,16 @@
 # Smart Wildlife Identifier
  
 A Python program that uses a binary decision tree to identify animals by asking yes/no questions. Researchers can also teach it new animals while it runs.
- 
+
+ <b>Table of Content</b>
+- [How it works](#how-it-works)
+- [Author](#author)
+- [Requirements](#requirements)
+- [Running the programd](#running-the-program)
+- [Menu options](#menu-options)
+- [Code overview](#code-overview)
+- [Concepts Demonstrated](#concepts-demonstrated)
+
 ## How It Works
  
 The program stores its knowledge as a tree of `DecisionNode` objects. Each node holds some text and two links:
@@ -100,4 +109,8 @@ After adding the dolphin, the tree has 9 nodes.
 - Recursion (counting, searching, and displaying)
 - Modifying a tree by changing node references, similar to BST insert and delete
 - Input validation
- 
+
+ ## Author
+ **Suna Aregay**  
+GitHub: [@suna2km](https://github.com/suna2km)
+
