@@ -9,8 +9,7 @@
 class DecisionNode:
     def __init__(self, text):
         self.text = text
-        # TODO 1:
-        # Create left and right child references
+        # left and right child references
         self.left = None
         self.right = None
 
@@ -26,27 +25,16 @@ class DecisionNode:
 def build_tree():
     # Root question
     root = DecisionNode("Does it have feathers?")
-    # TODO 2:
-    # Create the remaining question nodes:
-    #
-    # "Can it fly?"
-    # "Does it live in water?"
+    # The remaining question nodes:
     can_fly = DecisionNode("Can it fly?")
     live_in_water = DecisionNode("Does it live in water?")
 
-    # TODO 3:
-    # Create the four classification nodes:
-    #
-    # Bird
-    # Penguin
-    # Fish
-    # Mammal
+    # The four classification nodes:
     bird = DecisionNode("Bird")
     penguin = DecisionNode("Penguin")
     fish = DecisionNode("Fish")
     mammal = DecisionNode("Mammal")
 
-    # TODO 4:
     # Connect the nodes using:
     #
     # left = YES
@@ -66,7 +54,6 @@ def build_tree():
 
 def identify_animal(root):
     current = root
-    # TODO 5:
     # Continue while current is not a leaf node.
     #
     # Ask the question stored in current.text.
@@ -90,8 +77,7 @@ def identify_animal(root):
 # Count Tree Nodes
 # --------------------------------------------
 def count_nodes(node):
-    # TODO 6:
-    # Use recursion to count every node.
+    # Using recursion to count every node.
     if node is None:
         return 0
     left_count = count_nodes(node.left)
@@ -104,16 +90,15 @@ def count_nodes(node):
 # --------------------------------------------
 
 def show_animals(node):
-    # TODO 7:
-    # Use recursion.
+    # Uses recursion.
     #
-    # Print only leaf nodes.
+    # Prints only leaf nodes.
     #
-    # Do not print question nodes.
+    # Does not print question nodes.
     if node is None:
         return
     if node.left is None and node.right is None: # node is a leaf node
-        print(node.text)                         # p
+        print(node.text)                         
         return
     show_animals(node.left)  # recursively show animals in the left subtree
     show_animals(node.right)  # recursively show animals in the right subtree
@@ -124,9 +109,7 @@ def show_animals(node):
 def add_animal(root):
     print("\nAdd a New Animal")
 
-    # TODO 8:
-    #
-    # Ask the researcher:
+    # Asks the researcher:
     #
     # 1. Which existing animal should be replaced
     #    by a new decision?
@@ -138,15 +121,15 @@ def add_animal(root):
     #
     # 4. Does YES mean the new animal?
     #
-    # Locate the existing animal leaf.
+    # Locates the existing animal leaf.
     #
-    # Replace that leaf's text with the new question.
+    # Replaces that leaf's text with the new question.
     #
-    # Create two child nodes:
+    # Creates two child nodes:
     # one for the existing animal and
     # one for the new animal.
     #
-    # Use left = YES and right = NO.
+    # Uses left = YES and right = NO.
     existing_animal = input("Which existing animal should be replaced? ").strip()
     
     def search_animal(node):
